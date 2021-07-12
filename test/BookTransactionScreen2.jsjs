@@ -1,0 +1,102 @@
+/** @format */
+
+import React from "react";
+import {
+  View,
+  StyleSheet,
+  TextInput,
+  Text,
+  Image,
+  TouchableOpacity,
+  TextBase,
+} from "react-native";
+
+import { Entypo, FontAwesome, MaterialIcons } from "react-native-vector-icons";
+
+const BookTransactionScreen = (props) => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>Student Id:</Text>
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          backgroundColor: "#fff",
+          borderBottomWidth: StyleSheet.hairlineWidth,
+          width: "90%",
+        }}
+      >
+        <FontAwesome name="id-card-o" size={35} color={"#adb5bd"} />
+        <TextInput style={styles.textInput} />
+        <TouchableOpacity
+          style={{
+            width: 80,
+            height: 38,
+            backgroundColor: "#adb5bd",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 8,
+          }}
+        >
+          <Text style={{ fontSize: 20 }}>Scan</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>Book Id:</Text>
+      </View>
+
+      <View
+        style={{
+          flexDirection: "row",
+          backgroundColor: "#fff",
+          borderBottomWidth: StyleSheet.hairlineWidth,
+          justifyContent: "space-between",
+          width: "90%",
+          alignItems: "center",
+        }}
+      >
+        <MaterialIcons name="library-books" size={35} color={"#adb5bd"} />
+        <TextInput style={styles.textInput} />
+        <TouchableOpacity
+          style={{
+            width: 80,
+            height: 38,
+            backgroundColor: "#adb5bd",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 8,
+          }}
+        >
+          <Text style={{ fontSize: 20 }}>Scan</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#f2f2f2",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  lowerContainer: {
+    alignSelf: "flex-start",
+    marginLeft: 20,
+    marginBottom: 10,
+    marginVertical: 10,
+  },
+
+  textInput: {
+    width: "70%",
+    height: 40,
+    backgroundColor: "#fff",
+  },
+  transactionForm: {
+    backgroundColor: "#fff",
+  },
+});
+
+export default BookTransactionScreen;
